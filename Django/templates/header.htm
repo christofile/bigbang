@@ -1,0 +1,28 @@
+<!-- 导航栏 -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner ">
+        <div class="container">
+            <ul class="nav pull-right">
+                {% if request.xmanuser.login %}
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            {{ request.xmanuser.nickname }}
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/account/change_avatar/">帐号设置</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/loginout/">退出</a></li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li><a href="/login/">登录</a></li>
+                    <li><a href="/register/">注册</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<br>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Citrix China Demo Center</title>
+    <link href="http://cdn.staticfile.org/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/static/css/sharehp.css" rel="stylesheet" media="screen">
+    
+</head>
+
+<body>
+
+<header class="jumbotron subhead">
+    <div class="container">
+        <h2 class="text-center">Citrix China Demo Center</h2>
+    </div>
+</header>
+
+<body>Lab Selection: 
+<script type="text/javascript" src="./JS/calendar3.js"></script>
+<div class="container">
+    <div class="form-laborder">
+	<form action="/orderlab/" method="POST">
+	    <br>
+		<select name="labtype">  
+		  	<option value="1">Please select a course</option>  
+		  	<option value="2">XenServer</option>  
+		  	<option value="3">XenDesktop</option>  
+		  	<option value="4">XenApp</option>
+		  	<option value="5">CloudPlatform</option>
+		</select>  
+
+		<select name="labdays">  
+		  	<option value="1">1 Day</option>  
+		  	<option value="3">3 Days</option>  
+		  	<option value="7">7 Days</option>  
+		  	<option value="15">15 Days</option>
+		  	<option value="30">30 Days</option>
+		</select>  
+	    <br />
+	    <br>	
+		<input type="radio" name="labtime" value="1" checked="checked" />Immediate provisioning
+	    <br />
+		<input type="radio" name="labtime" value="2" />Schedule a lab
+		<input type="text" name="input1" onclick="new Calendar().show(this);" />
+		<select name="hour">  
+			<option value="0">0</option>
+		  	<option value="1">1</option>  
+		  	<option value="2">2</option>  
+		  	<option value="3">3</option>  
+		  	<option value="4">4</option>
+		  	<option value="5">5</option>
+		  	<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+		</select>  
+		<select name="minute">  
+		  	<option value="1">00</option>  
+		  	<option value="2">15</option>  
+		  	<option value="3">30</option>  
+		  	<option value="4">45</option>
+		</select>  
+		<select name="noon">  
+		  	<option value="1">AM</option>  
+		  	<option value="2">PM</option>  
+		</select>  
+		<button class="btn input-block-level btn-primary" type="submit">ok</button>
+	 </form>
+</body>
+</html>
